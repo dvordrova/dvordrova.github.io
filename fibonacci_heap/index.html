@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Directed Graph Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+      <div x-data="$store.inputsData" x-ref="form">
+        <div>
+            <button
+                @click="popMin"
+                class="bg-blue-500
+                       hover:bg-blue-700
+                       text-white
+                       font-bold
+                       py-2
+                       px-4
+                       border
+                       border-blue-700
+                       rounded
+                       m-4"
+            >Pop min</button>
+        </div>
+        <div class="m-4">
+            <input
+                x-ref="insertInputField"
+                type="number"
+                x-model="insertInput"
+                placeholder="New value"
+                @keydown.enter="insert"
+                @keydown.tab.prevent="focusNext('changeInputField')"
+            >
+            <button
+                :disabled="!insertInput"
+                @click="insert"
+                class="bg-blue-500
+                       hover:bg-blue-700
+                       text-white
+                       font-bold
+                       py-2
+                       px-4
+                       border
+                       border-blue-700
+                       rounded"
+                :class="{ 'opacity-25 cursor-not-allowed': !insertInput }"
+            >Add value</button>
+        </div>
+
+        <div class="m-4">
+            <input
+                type="number"
+                x-ref="changeInputField"
+                x-model="changeInput"
+                @keydown.enter="decreaseKey"
+                @keydown.tab.prevent="focusNext('insertInputField')"
+                :placeholder="selectedNode ? 'Changed value' : 'Select node by click'"
+                :disabled="!selectedNode">
+            <button
+                class="bg-blue-500
+                       hover:bg-blue-700
+                       text-white
+                       font-bold
+                       py-2
+                       px-4
+                       border
+                       border-blue-700
+                       rounded"
+                @click="decreaseKey"
+                :class="{ 'opacity-25 cursor-not-allowed': !selectedNode || !changeInput }"
+                :disabled="!selectedNode || !changeInput"
+            >Decrease value</button>
+            <button
+                class="bg-blue-500
+                       hover:bg-blue-700
+                       text-white
+                       font-bold
+                       py-2
+                       px-4
+                       border
+                       border-blue-700
+                       rounded"
+                @click="deleteNode"
+                :class="{ 'opacity-25 cursor-not-allowed': !selectedNode }"
+                :disabled="!selectedNode"
+            >Delete node</button>
+        </div>
+
+    </div>
+    <div id="svg_container" class="m-4">
+        <svg id="svg" viewBox="-420 -280 700 420" width="700" height="420"><defs>
+          <pattern id="stripes" viewBox="0,0,8,8" width="16" height="16" patternUnits="userSpaceOnUse">
+            <polygon points="0,0 4,0 0,4" fill="#dd6060"></polygon>
+            <polygon points="0,8 8,0 8,4 4,8" fill="#dd6060"></polygon>
+            <polygon points="0,4 0,8 8,0 4,0" fill="#ddac51"></polygon>
+            <polygon points="4,8 8,8 8,4" fill="#ddac51"></polygon>
+          </pattern>
+        </defs>
+        </svg>
+    </div>
+    <div class="m-4 w-full max-w-lg p-6 bg-white shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold mb-4">History Log</h2>
+        <div id="history-log" class="space-y-1">
+            <div class="p-1 bg-green-100 border-l-4 border-green-500 text-green-800">
+                Created: #roots = 0, #nodes = 0, min = nil
+            </div>
+            <!-- <div class="p-1 bg-orange-100 border-l-4 border-orange-500 text-orange-800">
+                Delete operation performed
+            </div>
+            <div class="p-1 bg-blue-100 border-l-4 border-blue-500 text-blue-800">
+                Update operation performed
+            </div> -->
+        </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="fibonacci_heap.js"></script>
+  <script src="geometry.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="index.js"></script>
+</html>

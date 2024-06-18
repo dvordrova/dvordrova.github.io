@@ -48,6 +48,13 @@ let inputsData = {
     });
   },
   popMin() {
+    if (heap.min == inputsData.selectedNode.__data__.link) {
+      Alpine.store("inputsData").selectedNode = null;
+      Alpine.store("inputsData").changeInput = "";
+      Alpine.store("inputsData").$nextTick(() => {
+        document.querySelector('[x-ref="insertInputField"]').focus();
+      });
+    }
     let min = heap.popMin();
     this._addLog(
       "blue",
@@ -77,6 +84,11 @@ let inputsData = {
       "red",
       `remove ${prevValue}: #roots = ${heap.length}, #nodes = ${heap.n}, min = ${heap.min ? heap.min.value : null}`,
     );
+    Alpine.store("inputsData").selectedNode = null;
+    Alpine.store("inputsData").changeInput = "";
+    Alpine.store("inputsData").$nextTick(() => {
+      document.querySelector('[x-ref="insertInputField"]').focus();
+    });
   },
 };
 
@@ -358,8 +370,11 @@ function simulate(svg, fibData) {
       .attr("y1", (d) => d.source.y)
       .attr("x2", (d) => d.target.x)
       .attr("y2", (d) => d.target.y)
-      .classed("targeted", (d) => !d.source.mark);
+      .attr("stroke-dasharray", (d) => {
+        return d.target.marked ? "5,5" : "0";
+      });
 
+    // TODO: remove data from tick
     // Update nodes
     let group = svg
       .select("g.nodes")
@@ -457,6 +472,7 @@ setTimeout(() => {
     .force("charge", d3.forceManyBody().strength(-200))
     .force("collide", d3.forceCollide(20));
   simulate(svg, fibData);
+  inputsData._addLog("green", "Created: #roots = 4, #nodes = 8, min = 2");
 }, fibData[0].cumDelay + 3333);
 
 function processEvent(event) {

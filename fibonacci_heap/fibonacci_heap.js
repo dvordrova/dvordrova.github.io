@@ -69,6 +69,7 @@ class FibonacciHeap {
   /** @param {FibonacciHeap} otherHeap **/
   join(otherHeap) {
     this.n += otherHeap.n;
+    this.length += otherHeap.length;
     this.min = ConcatNodes(this.min, otherHeap.min);
   }
 
@@ -133,6 +134,7 @@ class FibonacciHeap {
       this.history.push(this.getData());
       this._consolidate();
     } else {
+      this.length = 0;
       this.min = null;
     }
     this.n--;
@@ -198,7 +200,7 @@ class FibonacciHeap {
       parent.children = node.next;
     }
     this.insertNode(node);
-    // this.history.push(this.getData());
+    this.history.push(this.getData());
   }
 
   _cutRecursive(node) {
@@ -306,7 +308,14 @@ class FibonacciHeap {
     }
     let addNode = (node, parent_node_id, depth, degree) => {
       let res = depth;
-      nodes.push({ id: node.id, value: node.value, depth, degree, link: node });
+      nodes.push({
+        id: node.id,
+        value: node.value,
+        depth,
+        degree,
+        link: node,
+        marked: node.marked,
+      });
       if (parent_node_id !== null) {
         links.push({ source: parent_node_id, target: node.id });
       }

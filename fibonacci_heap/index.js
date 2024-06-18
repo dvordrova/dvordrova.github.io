@@ -48,7 +48,10 @@ let inputsData = {
     });
   },
   popMin() {
-    if (heap.min == inputsData.selectedNode.__data__.link) {
+    if (
+      inputsData.selectedNode &&
+      heap.min == inputsData.selectedNode.__data__.link
+    ) {
       Alpine.store("inputsData").selectedNode = null;
       Alpine.store("inputsData").changeInput = "";
       Alpine.store("inputsData").$nextTick(() => {

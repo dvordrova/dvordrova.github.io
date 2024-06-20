@@ -11,6 +11,7 @@ let inputsData = {
   insertInput: "",
   changeInput: null,
   selectedNode: null,
+  simulationStarted: false,
   setInsertInput(value) {
     this.insertInput = value;
   },
@@ -66,7 +67,6 @@ let inputsData = {
   },
   decreaseKey() {
     try {
-      console.log(this.selectedNode);
       let prevValue = this.selectedNode.__data__.link.value;
       heap.decreaseKey(
         this.selectedNode.__data__.link,
@@ -206,7 +206,6 @@ function drawSpiral(svg, data) {
       };
     })
     .on("end", function (d, i) {
-      // console.log(d);
       if (i > 3) {
         d3.select(this)
           .transition()
@@ -255,35 +254,21 @@ function getYByData(d) {
 for (let i = 1; i < 9; ++i) {
   heap.insert(i);
 }
-console.log("min", heap.popMin());
+heap.popMin();
 heap.insert(20);
-console.log(heap.debug());
 
 let fibData = fibSquareData();
 drawBackground(svg, fibData);
 drawSpiral(svg, fibData);
 
-// applyZoom(svg, data, 0, data.cumDelay * 2, 5);
-// applyZoom(svg, data, data.cumDelay * 2, data.cumDelay, 1);
-
-// var path = svg.append("svg:g").selectAll("path"),
-//   circle = svg.append("svg:g").selectAll("g");
-
 let { nodes, links } = heap.getData();
 let simulation = null;
 
 function enrichNode(node) {
-  console.log(node);
   let { degree, depth, maxDepth } = node;
-  // console.log({ node, degree, depth, maxDepth, fibData });
   let square = fibData[degree];
   node.x0 = square.xFinal + (1 / 6) * square.sizeFinal;
   node.x1 = square.xFinal + (5 / 6) * square.sizeFinal;
-  // if (maxDepth == 1) {
-  //   node.y0 = square.yFinal + square.sizeFinal / 2;
-  //   node.y1 = square.yFinal + square.sizeFinal / 2;
-  //   continue
-  // }
   node.y0 = node.y1 =
     square.yFinal + (square.sizeFinal * (depth - 0.5)) / (maxDepth + 1);
 }
@@ -306,55 +291,15 @@ function clickNode(e, d) {
       document.querySelector('[x-ref="changeInputField"]').focus();
     });
   }
-  console.log(inputsData);
 }
 
 function simulate(svg, fibData) {
-  console.log({ nodes, links });
-
   for (let node of nodes) {
     enrichNode(node);
   }
   simulation.nodes(nodes).force("link").links(links);
   svg.append("g").attr("class", "links");
   svg.append("g").attr("class", "nodes");
-  // .force("center", d3.forceCenter(0, 0).strength(0.2));
-  // const link = svg
-  //   .append("g")
-  //   .attr("class", "links")
-  //   .selectAll("line")
-  //   .data(links)
-  //   .enter()
-  //   .append("line")
-  //   .attr("class", "link");
-  // const node = svg
-  //   .append("g")
-  //   .attr("class", "nodes")
-  //   .selectAll("g")
-  //   .data(nodes, (d) => d.id)
-  //   .enter()
-  //   .append("g");
-
-  // const circles = node
-  //   .append("circle")
-  //   .attr("class", "node")
-  //   .attr("r", treeRadius)
-  //   .attr("cx", (d) => d.x)
-  //   .attr("cy", (d) => d.y);
-
-  // circles.on("click", clickNode);
-
-  // const texts = node
-  //   .append("text")
-  //   .text((d) => d.value)
-  //   .attr("dx", getXByData)
-  // .attr("dy", getYByData);
-
-  // const labels = node
-  //   .append("text")
-  //   .text((d) => d.id)
-  //   .attr("dx", -10)
-  //   .attr("dy", 4);
 
   simulation.on("tick", () => {
     // Update links
@@ -411,44 +356,6 @@ function simulate(svg, fibData) {
       .attr("fill", (d) =>
         d.depth == 1 ? (d.isMin ? "url(#stripes)" : "#ddac51") : "#dde6c7",
       );
-
-    // svg
-    //   .select("g.nodes")
-    //   .selectAll("g text")
-    //   .attr("dx", getXByData)
-    //   .attr("dy", getYByData)
-    //   .attr("font-weight", (d) => (d.isMin ? "bold" : "normal"));
-
-    // console.log(d);
-    // svg
-    //   .select("g.links")
-    //   .selectAll("line")
-    //   .attr("x1", (d) => d.source.x)
-    //   .attr("y1", (d) => d.source.y)
-    //   .attr("x2", (d) => d.target.x)
-    //   .attr("y2", (d) => d.target.y)
-    //   .classed("targeted", (d) => !d.source.mark);
-    // // .attr("stroke", d.source.targeted ? "red" : "black");
-    // // circles
-    // svg
-    //   .select("g.nodes")
-    //   .selectAll("g circle")
-    //   .attr("cx", (d) => {
-    //     if (d.id == 6) {
-    //       console.log({ fig: "circle", d });
-    //     }
-    //     return d.x;
-    //   })
-    //   .attr("cy", (d) => d.y)
-    //   .attr("fill", (d) =>
-    //     d.depth == 1 ? (d.isMin ? "url(#stripes)" : "#ddac51") : "#dde6c7",
-    //   );
-    // svg
-    //   .select("g.nodes")
-    //   .selectAll("g text")
-    //   .attr("dx", getXByData)
-    //   .attr("dy", getYByData)
-    //   .attr("font-weight", (d) => (d.isMin ? "bold" : "normal"));
   });
 }
 
@@ -475,7 +382,12 @@ setTimeout(() => {
     .force("charge", d3.forceManyBody().strength(-200))
     .force("collide", d3.forceCollide(20));
   simulate(svg, fibData);
-  inputsData._addLog("green", "Created: #roots = 4, #nodes = 8, min = 2");
+  inputsData._addLog(
+    "green",
+    `Created: #roots = ${heap.length}, #nodes = ${heap.n}, min = ${heap.min.value}`,
+  );
+  Alpine.store("inputsData").simulationStarted = true;
+  inputsData.focusNext("insertInputField");
 }, fibData[0].cumDelay + 3333);
 
 function processEvent(event) {
@@ -501,49 +413,14 @@ function processEvent(event) {
   }
   for (let node of nodes) {
     if (ids[node.id] !== undefined) {
-      console.log({ node });
       ids[node.id].x = node.x;
       ids[node.id].y = node.y;
-      // ids[node.id].vx = node.vx;
-      // ids[node.id].vy = node.vy;
     }
   }
   nodes = newNodes;
 
-  console.log({ nodes });
   links = newLinks;
   simulation.nodes(nodes).force("link").links(links);
-  // simulation.force("link").initialize(links);
-  // simulation.force("charge").initialize(nodes);
-  // simulation.force("collide").initialize(nodes);
-  // simulation.force("toSegment").initialize(nodes);
-  // let gNodes = svg.selectAll("g.nodes").data(nodes, (d) => d.id);
-
-  // gNodes.exit().remove();
-
-  // let gN = gNodes.enter().append("g");
-  // gN.append("circle")
-  //   .attr("class", "node")
-  //   .attr("cx", (d) => d.x)
-  //   .attr("cy", (d) => d.y)
-  //   .attr("r", treeRadius)
-  //   .on("click", clickNode);
-  // // gN.append("text")
-  // //   .text((d) => d.value)
-  // //   .attr("dx", getXByData)
-  // //   .attr("dy", getYByData);
-
-  // svg
-  //   .select("g.links")
-  //   .selectAll("line")
-  //   .data(links)
-  //   .enter()
-  //   .append("line")
-  //   .attr("class", "link")
-  //   .attr("x1", (d) => d.source.x)
-  //   .attr("y1", (d) => d.source.y)
-  //   .attr("x2", (d) => d.target.x)
-  //   .attr("y2", (d) => d.target.y);
 
   simulation.alpha(1).restart();
 }

@@ -154,16 +154,12 @@ class FibonacciHeap {
       cur_root = cur_root.next;
     } while (cur_root !== this.min);
     for (let w of roots) {
-      console.log(w);
       let j = 0;
-      // console.log({ A: structuredClone(A) });
       let next_w = w.next;
       let d = w.children_count;
       while (A[d] && j < 10) {
         j++;
-        // console.log({ d });
         let y = A[d];
-        // console.log({ w, y });
         if (w.value > y.value) {
           [w, y] = [y, w];
         }
@@ -172,13 +168,11 @@ class FibonacciHeap {
         A[d] = null;
         d++;
       }
-      // console.log(`push ${d}`);
       A[d] = w;
       w = next_w;
     }
     this.min = null;
     this.length = 0;
-    console.log(A);
     for (let i = 0; i < A.length; i++) {
       if (A[i] === null) {
         continue;

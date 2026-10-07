@@ -1,0 +1,1227 @@
+{
+  "measured_at": "2026-10-07T06:11:11.857355+00:00",
+  "prices_checked_on": "2026-10-07",
+  "scope": "Exact artifact receipt runs only; all logged child roots, successful portfolio roots and live refusals included; prior attempts, probes, saved rendering and browser QA excluded",
+  "prices": {
+    "jev_source": "https://docs.typesafe.ai/models",
+    "deepseek_source": "https://api-docs.deepseek.com/quick_start/pricing/"
+  },
+  "limitations": [
+    "Dollar figures are current-tariff estimates, not invoices or balance attribution.",
+    "Cache/shared hits preserve original usage and are excluded from current-run spending.",
+    "Reasoning tokens are already part of output tokens and not added twice.",
+    "Provider usage sums already include retries; do not multiply by attempts.",
+    "Endpoints and UsageReported flags are not retained by journal v3.",
+    "Absent logged native-failed child roots remain explicit; ordinary log/timing comparison is evidence, not an invoice."
+  ],
+  "pending_new_examples": [
+    "metabase",
+    "airflow"
+  ],
+  "runs": [
+    {
+      "repository": "beets",
+      "report_url": "https://dvordrova.github.io/repomap/beets#canvas",
+      "run_id": "20261006-170754-beets-198747d0d6e2",
+      "html_sha256": "9b848c8c66f965f055203948ab44a5645e1764f0687ff7ca797bdf5fa2504b9f",
+      "report_sha256": "6c5ecc5d72207573efdd4f6e6c68d9dd7d6ad30740f0e7c210cc488293e51a74",
+      "command_ms": 391456,
+      "journal_count": 2407,
+      "journal_set_sha256": "53848e5b13691318f6353b169d7f2abe4c9c3db91cd5a406e1f055dc5cd5f6ff",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 1006,
+          "transport_attempts": 1006,
+          "live_transported_calls": 1006,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 8146736,
+          "output_tokens": 477456,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 664,
+          "cache_origin_input_tokens_not_billed_here": 2200493,
+          "cache_origin_output_tokens_not_billed_here": 108299,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 1006
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 1006,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.342162912,
+            "maximum_usd": 0.342162912,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 646,
+          "transport_attempts": 646,
+          "live_transported_calls": 646,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 969243,
+          "output_tokens": 81739,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 184188,
+          "local_cache_or_shared_calls": 91,
+          "cache_origin_input_tokens_not_billed_here": 54775,
+          "cache_origin_output_tokens_not_billed_here": 2496,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 641,
+            "rejected": 4,
+            "provider_failed": 1
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 646,
+          "provider_prefix_cache_miss_tokens": 785055,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.167354214,
+            "maximum_usd": 0.334708428,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "casdoor",
+      "report_url": "https://dvordrova.github.io/repomap/casdoor#canvas",
+      "run_id": "20261006-162506-casdoor-a77abe3d90b1",
+      "html_sha256": "a7a479e150f344c296a1d6ef63c049ca91985f8e8ec3019364aba09ae99b4073",
+      "report_sha256": "68b217fda2ec878b350ff59ac39a0ce02ad76972dc5dcb3573624f432303ebe4",
+      "command_ms": 318864,
+      "journal_count": 1772,
+      "journal_set_sha256": "7d57acb39e7a06a9c94b8524451501d5e875424d6787ca676cca640dd3a1f7c2",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 953,
+          "transport_attempts": 953,
+          "live_transported_calls": 953,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 5236341,
+          "output_tokens": 271788,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 675,
+          "cache_origin_input_tokens_not_billed_here": 2292811,
+          "cache_origin_output_tokens_not_billed_here": 111905,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 953
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 953,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.219926322,
+            "maximum_usd": 0.219926322,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 120,
+          "transport_attempts": 120,
+          "live_transported_calls": 120,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 853483,
+          "output_tokens": 51352,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 124032,
+          "local_cache_or_shared_calls": 24,
+          "cache_origin_input_tokens_not_billed_here": 59931,
+          "cache_origin_output_tokens_not_billed_here": 1370,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 117,
+            "rejected": 2,
+            "provider_failed": 1
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 120,
+          "provider_prefix_cache_miss_tokens": 729451,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.140600946,
+            "maximum_usd": 0.281201892,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "etcd",
+      "report_url": "https://dvordrova.github.io/repomap/etcd#canvas",
+      "run_id": "20261006-163026-etcd-f46e282dab62",
+      "html_sha256": "ddd8c38eb839392ec7b0547115e1dcbdac2a0ddbd84c60c620206ac2abc60ca9",
+      "report_sha256": "5d28dcfaecd9764d113e18db5db9a6df81527a99c6b4c338f58d06f33e1eb562",
+      "command_ms": 900646,
+      "journal_count": 4101,
+      "journal_set_sha256": "601c6326eb8e9efe9c6118bfa39190ebb7dc7521e90fdf19a2e1ff9308faccdc",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 3132,
+          "transport_attempts": 3132,
+          "live_transported_calls": 3132,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 26709217,
+          "output_tokens": 1140686,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 385,
+          "cache_origin_input_tokens_not_billed_here": 1074584,
+          "cache_origin_output_tokens_not_billed_here": 44952,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 3132
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 3132,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 1.121787114,
+            "maximum_usd": 1.121787114,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 575,
+          "transport_attempts": 575,
+          "live_transported_calls": 575,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 5653469,
+          "output_tokens": 187597,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 471932,
+          "local_cache_or_shared_calls": 9,
+          "cache_origin_input_tokens_not_billed_here": 164909,
+          "cache_origin_output_tokens_not_billed_here": 2563,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 566,
+            "rejected": 9
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 575,
+          "provider_prefix_cache_miss_tokens": 5181537,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.8912045459999999,
+            "maximum_usd": 1.7824090919999998,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "freqtrade",
+      "report_url": "https://dvordrova.github.io/repomap/freqtrade#canvas",
+      "run_id": "20261006-171426-freqtrade-521e7bfd5875",
+      "html_sha256": "59dc0be468111564c479d9524c8f110327833aa32499b97e13e538d12f139ac4",
+      "report_sha256": "37901949255c61bdf04840699c715cd281845e4e008532ed2d87bf0f36d29104",
+      "command_ms": 317010,
+      "journal_count": 1480,
+      "journal_set_sha256": "5800bc2c5ed565a0a7d4d65341e76ab8e9000e7727ac00c4cc9ffc72d2e26cfb",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 1367,
+          "transport_attempts": 1367,
+          "live_transported_calls": 1367,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 10879049,
+          "output_tokens": 487350,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 1367
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 1367,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.456920058,
+            "maximum_usd": 0.456920058,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 113,
+          "transport_attempts": 113,
+          "live_transported_calls": 113,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 685015,
+          "output_tokens": 25056,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 62976,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 113
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 113,
+          "provider_prefix_cache_miss_tokens": 622039,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.108528378,
+            "maximum_usd": 0.217056756,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "headscale",
+      "report_url": "https://dvordrova.github.io/repomap/headscale#canvas",
+      "run_id": "20261006-164528-headscale-c1c3b5c20d4b",
+      "html_sha256": "398c3da6957ee0a9c701941455bf19ba1dad9d44eba93a825e8b1c8d4245c7ac",
+      "report_sha256": "fc6f1bd19ab9fb181cf7e9cf4c70a6b5191c1fdde117ba6085efb3b8cfe3aee3",
+      "command_ms": 194340,
+      "journal_count": 1580,
+      "journal_set_sha256": "978c67e24f82d42a788f3e58572a7d0fe262e4d13d33293deade19fe5c245ee8",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 1463,
+          "transport_attempts": 1463,
+          "live_transported_calls": 1463,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 14065093,
+          "output_tokens": 579176,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 1463
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 1463,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.5907339060000001,
+            "maximum_usd": 0.5907339060000001,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 116,
+          "transport_attempts": 116,
+          "live_transported_calls": 116,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 816113,
+          "output_tokens": 18041,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 84992,
+          "local_cache_or_shared_calls": 1,
+          "cache_origin_input_tokens_not_billed_here": 15676,
+          "cache_origin_output_tokens_not_billed_here": 721,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 114,
+            "rejected": 2
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 116,
+          "provider_prefix_cache_miss_tokens": 731121,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.120747726,
+            "maximum_usd": 0.241495452,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "k6",
+      "report_url": "https://dvordrova.github.io/repomap/k6#canvas",
+      "run_id": "20261006-170253-k6-b9cd85ab28f7",
+      "html_sha256": "ca49c5c175523d3a4f92648fc5eb503aa94dc6ba403c5bac89f2deae2779e582",
+      "report_sha256": "056f2e0233ad14ddf3b8864a161190923dcba67d38c5c96784dd5a960bab8006",
+      "command_ms": 69028,
+      "journal_count": 933,
+      "journal_set_sha256": "7da9732657f8b062c5443648871dcad3eeccf283a39d7062a9f24f1f4a8a2210",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 1,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 2,
+          "transport_attempts": 2,
+          "live_transported_calls": 2,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 40449,
+          "output_tokens": 816,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 851,
+          "cache_origin_input_tokens_not_billed_here": 2788913,
+          "cache_origin_output_tokens_not_billed_here": 133560,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 2
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 2,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.0016988580000000001,
+            "maximum_usd": 0.0016988580000000001,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 0,
+          "transport_attempts": 0,
+          "live_transported_calls": 0,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 80,
+          "cache_origin_input_tokens_not_billed_here": 416134,
+          "cache_origin_output_tokens_not_billed_here": 62006,
+          "zero_usage_transported_calls": 0,
+          "live_states": {},
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 0,
+          "provider_prefix_cache_miss_tokens": 0,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.0,
+            "maximum_usd": 0.0,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "lua",
+      "report_url": "https://dvordrova.github.io/repomap/lua#canvas",
+      "run_id": "20261006-172122-lua-a10da5140fe2",
+      "html_sha256": "9e03806247be2d3d7d62c2effb37aa4ce49df54188260abef00787c4f868eeee",
+      "report_sha256": "be6484aad46acb79c46e269e81c8abcc627259ca01648b6743edcc7549556c7d",
+      "command_ms": 72510,
+      "journal_count": 730,
+      "journal_set_sha256": "bc5a51a31a1696767ef33715f2066c426e6a4fe070a91376f50670229d35f7f1",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 275,
+          "transport_attempts": 275,
+          "live_transported_calls": 275,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 2505458,
+          "output_tokens": 150109,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 258,
+          "cache_origin_input_tokens_not_billed_here": 2049188,
+          "cache_origin_output_tokens_not_billed_here": 106579,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 275
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 275,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.105229236,
+            "maximum_usd": 0.105229236,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 151,
+          "transport_attempts": 151,
+          "live_transported_calls": 151,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 387693,
+          "output_tokens": 6877,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 67964,
+          "local_cache_or_shared_calls": 46,
+          "cache_origin_input_tokens_not_billed_here": 58414,
+          "cache_origin_output_tokens_not_billed_here": 757,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 151
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 151,
+          "provider_prefix_cache_miss_tokens": 319729,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.052289442,
+            "maximum_usd": 0.104578884,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "moby",
+      "report_url": "https://dvordrova.github.io/repomap/moby#canvas",
+      "run_id": "20261006-182024-moby-b02b7a34950e",
+      "html_sha256": "2b529160ea2697694a97adeec39d4e68b14be9fd2464e801ec90cd4cdf992ea4",
+      "report_sha256": "e7936aabef961d75fe5aa24bc9c8d5688a55e5fe38c277bb9a008d438012e914",
+      "command_ms": 1374081,
+      "journal_count": 4292,
+      "journal_set_sha256": "f920a1649a7c92212bb5bea9975268f2b86f5442c143d38c7839c8f99afc4b97",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 6,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 3966,
+          "transport_attempts": 3966,
+          "live_transported_calls": 3966,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 30935180,
+          "output_tokens": 1467975,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 3966
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 3966,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 1.2992775600000002,
+            "maximum_usd": 1.2992775600000002,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 309,
+          "transport_attempts": 309,
+          "live_transported_calls": 309,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 3734451,
+          "output_tokens": 311776,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 181248,
+          "local_cache_or_shared_calls": 17,
+          "cache_origin_input_tokens_not_billed_here": 1066712,
+          "cache_origin_output_tokens_not_billed_here": 117414,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 303,
+            "provider_failed": 4,
+            "rejected": 2
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 309,
+          "provider_prefix_cache_miss_tokens": 3553203,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.7205897939999999,
+            "maximum_usd": 1.4411795879999998,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "othello",
+      "report_url": "https://dvordrova.github.io/repomap/othello#canvas",
+      "run_id": "20261006-160242-othello-e5e94f2aacc9",
+      "html_sha256": "6327337a6327f3199445bf75dde115497ef8bc0d2088d743a860a957d205b53b",
+      "report_sha256": "59ccf98a4342c09cf1043aef7ef1a01c39c4ce6eee2c17383a0804cc19da5742",
+      "command_ms": 29623,
+      "journal_count": 171,
+      "journal_set_sha256": "d6ffdd4531dd22395d5d4c98aca4fda7e7475dc8cb8aaed6545f7b00819b75f4",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": false,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 54,
+          "transport_attempts": 54,
+          "live_transported_calls": 54,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 62639,
+          "output_tokens": 2703,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 21117,
+          "local_cache_or_shared_calls": 1,
+          "cache_origin_input_tokens_not_billed_here": 520,
+          "cache_origin_output_tokens_not_billed_here": 20,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 54
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 54,
+          "provider_prefix_cache_miss_tokens": 41522,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.007913451,
+            "maximum_usd": 0.015826902,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        },
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 98,
+          "transport_attempts": 98,
+          "live_transported_calls": 98,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 790746,
+          "output_tokens": 36737,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 18,
+          "cache_origin_input_tokens_not_billed_here": 90881,
+          "cache_origin_output_tokens_not_billed_here": 4370,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 98
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 98,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.033211332,
+            "maximum_usd": 0.033211332,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "pykrx",
+      "report_url": "https://dvordrova.github.io/repomap/pykrx#canvas",
+      "run_id": "20261006-171944-pykrx-dfa84c9d310a",
+      "html_sha256": "cabfd86cf40f8ed127c6895667285ab8b7fcc2f6062c908b5ab5a903918522ef",
+      "report_sha256": "5d3b060c89c6d433fbfb9b4391c49ce42864aa3ca9fc0874b21acfe89327e83c",
+      "command_ms": 48671,
+      "journal_count": 177,
+      "journal_set_sha256": "a2dcfc2aa8b9de9c5ab027303eb9a8a6ae09344733485ecfbe03237fc3630018",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 127,
+          "transport_attempts": 127,
+          "live_transported_calls": 127,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 940145,
+          "output_tokens": 71205,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 127
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 127,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.03948609,
+            "maximum_usd": 0.03948609,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 50,
+          "transport_attempts": 50,
+          "live_transported_calls": 50,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 174824,
+          "output_tokens": 6607,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 21632,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 50
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 50,
+          "provider_prefix_cache_miss_tokens": 153192,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.027007896,
+            "maximum_usd": 0.054015792,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "python-tutorial-game",
+      "report_url": "https://dvordrova.github.io/repomap/python-tutorial-game#canvas",
+      "run_id": "20261006-170526-python-tutorial-game-affd1ae757af",
+      "html_sha256": "25c9e911303b15713809c019e2bf812877f1e6eb7651d70c25f0a76d9ff634f3",
+      "report_sha256": "e9f43f60b5a6513fd13b710e37d6795b6fae84d2db5e2b7a0d6dfc5cd49aa65b",
+      "command_ms": 27417,
+      "journal_count": 109,
+      "journal_set_sha256": "0173b9269e6d29c177f0e0d6130863334272bed0ab8861bdd7b4cceb7584beda",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 76,
+          "transport_attempts": 76,
+          "live_transported_calls": 76,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 389689,
+          "output_tokens": 19095,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 76
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 76,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.016366938,
+            "maximum_usd": 0.016366938,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 33,
+          "transport_attempts": 33,
+          "live_transported_calls": 33,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 41775,
+          "output_tokens": 2180,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 17024,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 31,
+            "rejected": 2
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 33,
+          "provider_prefix_cache_miss_tokens": 24751,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.005071722,
+            "maximum_usd": 0.010143444,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "redis",
+      "report_url": "https://dvordrova.github.io/repomap/redis#canvas",
+      "run_id": "20261006-172032-redis-1-3-6-845873f9e196",
+      "html_sha256": "9975838c7352b605bc45e1f79b8f1f7dfa0b5d3bcf937279e15e8941840ca9bd",
+      "report_sha256": "a8b44ac46374b1e06d81167dfe09718f57dcc4a2ce5351f63bebb4ded845d396",
+      "command_ms": 49603,
+      "journal_count": 327,
+      "journal_set_sha256": "c88c8695885809f261113dd1c2f3ffc9e31497078b3e53282637ec76a7eeea69",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 214,
+          "transport_attempts": 214,
+          "live_transported_calls": 214,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 2036356,
+          "output_tokens": 132578,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 23,
+          "cache_origin_input_tokens_not_billed_here": 49774,
+          "cache_origin_output_tokens_not_billed_here": 1896,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 214
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 214,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.085526952,
+            "maximum_usd": 0.085526952,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 87,
+          "transport_attempts": 87,
+          "live_transported_calls": 87,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 225212,
+          "output_tokens": 7961,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 120189,
+          "local_cache_or_shared_calls": 3,
+          "cache_origin_input_tokens_not_billed_here": 2021,
+          "cache_origin_output_tokens_not_billed_here": 47,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 87
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 87,
+          "provider_prefix_cache_miss_tokens": 105023,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.020890616999999997,
+            "maximum_usd": 0.041781233999999993,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "repomap",
+      "report_url": "https://dvordrova.github.io/repomap/repomap#canvas",
+      "run_id": "20261006-231808-repomap-23e2f4e27bd8",
+      "html_sha256": "ca64e353bc432909016b16824485130489ab959f8b2fef507a2677d73e7352f4",
+      "report_sha256": "036e82c4ba4f17251514d2be8900567fbead6ae4e4e5015ce519bebc27c739d0",
+      "command_ms": 246631,
+      "journal_count": 1134,
+      "journal_set_sha256": "14cb1750c479b72b791f28550af74e0e158bb129eab84ad9733168f8e340215f",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 0,
+          "transport_attempts": 0,
+          "live_transported_calls": 0,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 902,
+          "cache_origin_input_tokens_not_billed_here": 4562922,
+          "cache_origin_output_tokens_not_billed_here": 232938,
+          "zero_usage_transported_calls": 0,
+          "live_states": {},
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 0,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.0,
+            "maximum_usd": 0.0,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 0,
+          "transport_attempts": 0,
+          "live_transported_calls": 0,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 232,
+          "cache_origin_input_tokens_not_billed_here": 550980,
+          "cache_origin_output_tokens_not_billed_here": 16882,
+          "zero_usage_transported_calls": 0,
+          "live_states": {},
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 0,
+          "provider_prefix_cache_miss_tokens": 0,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.0,
+            "maximum_usd": 0.0,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "sqlite",
+      "report_url": "https://dvordrova.github.io/repomap/sqlite#canvas",
+      "run_id": "20261006-111103-sqlite-e98dca0af76a",
+      "html_sha256": "07dc663adcfb2858397a5b1a93ec725932533af02a8896ec4b49c274b46c5f6d",
+      "report_sha256": "810fee50276811323e3b28f2fe7f207a77fdc5a7322c00dc4ce372e79700e4e7",
+      "command_ms": 622357,
+      "journal_count": 1672,
+      "journal_set_sha256": "f1d5fe51922b241a3f50f8cd37bdc2225f6e2919f5ad3d4ca281a2ae3b8dc0f4",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": false,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 179,
+          "transport_attempts": 179,
+          "live_transported_calls": 179,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 2378095,
+          "output_tokens": 172970,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 79488,
+          "local_cache_or_shared_calls": 51,
+          "cache_origin_input_tokens_not_billed_here": 390170,
+          "cache_origin_output_tokens_not_billed_here": 6399,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 178,
+            "provider_failed": 1
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 179,
+          "provider_prefix_cache_miss_tokens": 2298607,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.44881151399999997,
+            "maximum_usd": 0.8976230279999999,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        },
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 463,
+          "transport_attempts": 463,
+          "live_transported_calls": 463,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 6459445,
+          "output_tokens": 1241173,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 979,
+          "cache_origin_input_tokens_not_billed_here": 14305024,
+          "cache_origin_output_tokens_not_billed_here": 2828869,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 463
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 463,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.27129669,
+            "maximum_usd": 0.27129669,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "telebot",
+      "report_url": "https://dvordrova.github.io/repomap/telebot#canvas",
+      "run_id": "20261006-170439-telebot-0832e5a275c7",
+      "html_sha256": "ec668e646f57772bd679d24cba3964954f9caab316d877875b69d3cd66873f70",
+      "report_sha256": "555e7ed87016bdf0c7063eec0782367b2493bbc539919ed16cf11e44c792cb9a",
+      "command_ms": 45953,
+      "journal_count": 251,
+      "journal_set_sha256": "038bbcd61eb5b9590767abfe38fdb92ff47e9c355f965dc177165223f0319878",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 225,
+          "transport_attempts": 225,
+          "live_transported_calls": 225,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 1895665,
+          "output_tokens": 79064,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 225
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 225,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.07961793,
+            "maximum_usd": 0.07961793,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 26,
+          "transport_attempts": 26,
+          "live_transported_calls": 26,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 127143,
+          "output_tokens": 4324,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 12928,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 26
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 26,
+          "provider_prefix_cache_miss_tokens": 114215,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.019765434000000002,
+            "maximum_usd": 0.039530868000000004,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "type-fest",
+      "report_url": "https://dvordrova.github.io/repomap/type-fest#canvas",
+      "run_id": "20261006-170553-type-fest-4873f7d9ae91",
+      "html_sha256": "7f9b1eac14dad1bca4790d4e5982d5b20affeee0c4d5f6211a363797677df0fb",
+      "report_sha256": "81d760a1f7986c44fa4ed9c0f8b11c85dbf4c7c7bfb3dd892107c958c30485c5",
+      "command_ms": 120287,
+      "journal_count": 520,
+      "journal_set_sha256": "7e3283cf13cbbe4cc6ffce50e507730ea3b29811f271dbeea04583a2041e8a67",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 487,
+          "transport_attempts": 487,
+          "live_transported_calls": 487,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 2706977,
+          "output_tokens": 175987,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 487
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 487,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.11369303400000001,
+            "maximum_usd": 0.11369303400000001,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 33,
+          "transport_attempts": 33,
+          "live_transported_calls": 33,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 224642,
+          "output_tokens": 2975,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 12928,
+          "local_cache_or_shared_calls": 0,
+          "cache_origin_input_tokens_not_billed_here": 0,
+          "cache_origin_output_tokens_not_billed_here": 0,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 33
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 33,
+          "provider_prefix_cache_miss_tokens": 211714,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.033580884,
+            "maximum_usd": 0.067161768,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    }
+  ]
+}

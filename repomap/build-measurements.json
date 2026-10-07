@@ -1,5 +1,5 @@
 {
-  "measured_at": "2026-10-07T06:11:11.857355+00:00",
+  "measured_at": "2026-10-07T18:58:43.731466+00:00",
   "prices_checked_on": "2026-10-07",
   "scope": "Exact artifact receipt runs only; all logged child roots, successful portfolio roots and live refusals included; prior attempts, probes, saved rendering and browser QA excluded",
   "prices": {
@@ -15,7 +15,6 @@
     "Absent logged native-failed child roots remain explicit; ordinary log/timing comparison is evidence, not an invoice."
   ],
   "pending_new_examples": [
-    "metabase",
     "airflow"
   ],
   "runs": [
@@ -543,6 +542,83 @@
           "estimated_usd_current_tariff": {
             "minimum_usd": 0.052289442,
             "maximum_usd": 0.104578884,
+            "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "metabase",
+      "report_url": "https://dvordrova.github.io/repomap/metabase#canvas",
+      "run_id": "20261007-064833-metabase-8bcb1adc5c05",
+      "html_sha256": "c8628b62c421f83211a44c50c352a1e72163ab82a3b3129b9fc03938300f71d4",
+      "report_sha256": "80646fcffc5352e7b5cc8a55bf0d77ed825d0f186691e62bfc94bac91964acb9",
+      "command_ms": 9526328,
+      "journal_count": 24313,
+      "journal_set_sha256": "4f4df66fdd2ae256336e6e79a844201f2da4d95fa802e56d149c9945b6617a68",
+      "journal_live_matches_timing": true,
+      "ordinary_wrapper_log_available": true,
+      "unavailable_native_child_journals": 0,
+      "providers": [
+        {
+          "provider": "Jev",
+          "model": "jev-1.13.0",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 128,
+          "transport_attempts": 128,
+          "live_transported_calls": 128,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 1383758,
+          "output_tokens": 139171,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 0,
+          "local_cache_or_shared_calls": 23326,
+          "cache_origin_input_tokens_not_billed_here": 81427472,
+          "cache_origin_output_tokens_not_billed_here": 3787757,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 128
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 128,
+          "provider_prefix_cache_miss_tokens": null,
+          "cache_miss_provenance": "not applicable",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 0.058117836000000006,
+            "maximum_usd": 0.058117836000000006,
+            "basis": "current official input tariff; output free; reported usage only"
+          }
+        },
+        {
+          "provider": "DeepSeek",
+          "model": "deepseek-v4-flash",
+          "endpoint": null,
+          "endpoint_availability": "not persisted in prepared request or exchange",
+          "live_logical_calls": 335,
+          "transport_attempts": 335,
+          "live_transported_calls": 335,
+          "live_untransmitted_calls": 0,
+          "input_tokens": 21754859,
+          "output_tokens": 2919059,
+          "reasoning_tokens": 0,
+          "provider_prefix_cache_hit_tokens": 5137792,
+          "local_cache_or_shared_calls": 524,
+          "cache_origin_input_tokens_not_billed_here": 11553090,
+          "cache_origin_output_tokens_not_billed_here": 687702,
+          "zero_usage_transported_calls": 0,
+          "live_states": {
+            "accepted": 278,
+            "provider_failed": 34,
+            "rejected": 23
+          },
+          "usage_reported_flag": null,
+          "usage_reported_flag_unavailable_live_calls": 335,
+          "provider_prefix_cache_miss_tokens": 16617067,
+          "cache_miss_provenance": "derived input minus provider-reported cache hit; miss field not in journal",
+          "estimated_usd_current_tariff": {
+            "minimum_usd": 4.259408826,
+            "maximum_usd": 8.518817652,
             "basis": "current off-peak/peak bounds; no historic time-band attribution; reported usage only"
           }
         }
